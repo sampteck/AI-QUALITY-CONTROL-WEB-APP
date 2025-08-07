@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Quality Control System</title>
+  <link rel="stylesheet" href="NewStyle2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="branding">
+      <img src="image1.png" alt="Logo" class="logo-img" />
+      <h1 class="main-title">AI Quality Control System</h1>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <!-- Main App Container -->
+  <div id="app">
+    
+    <!-- Manual Input Section -->
+    <section class="card animated fadeIn">
+      <h2>Manual Product Input</h2>
+      <input type="number" id="weightInput" placeholder="Enter Weight (kg)" />
+      <input type="number" id="sizeInput" placeholder="Enter Size (cm)" />
+      <button onclick="submitManualInput()">Submit</button>
+    </section>
+
+    <!-- Simulated Sensor Button -->
+    <section class="card animated fadeIn delay-1">
+      <h2>Simulate Sensor Data</h2>
+      <button onclick="simulateSensorData()">Stimulate</button>
+    </section>
+
+    <!-- Graph Visualization -->
+    <section class="card animated fadeIn delay-2">
+      <h2>Live Quality Trends</h2>
+      <canvas id="qualityChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Status Display -->
+    <section class="card animated fadeIn delay-3">
+      <h2>System Status</h2>
+      <p id="statusDisplay">Awaiting...</p>
+    </section>
+
+    <!-- Export and Print -->
+    <section class="card animated fadeIn delay-4">
+      <h2>Export Logs</h2>
+      <button onclick="exportCSV()">Export to CSV</button>
+      <button onclick="window.print()">Print/PDF</button>
+    </section>
+
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="NewScript2.js"></script>
+</body>
+</html>
